@@ -7,9 +7,7 @@ export class ThemeWrapper extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Fragment>
-          {this.props.children}
-        </Fragment>
+        <Fragment>{this.props.children}</Fragment>
       </ThemeProvider>
     );
   }
