@@ -13,8 +13,12 @@ module.exports = {
     modules: [path.resolve(__dirname, '../src'), 'node_modules'],
     extensions: ['*', '.js', '.jsx', '.css', '.scss'],
     alias: {
-
-    }
+      '<src>': path.resolve(__dirname, '../src'),
+      '<pages>': path.resolve(__dirname, '../src/components/pages'),
+      '<components>': path.resolve(__dirname, '../src/components'),
+      '<routes>': path.resolve(__dirname, '../src/routes'),
+      '<styles>': path.resolve(__dirname, '../src/styles')
+    },
   },
   plugins: [
     new webpack.ProgressPlugin(),
