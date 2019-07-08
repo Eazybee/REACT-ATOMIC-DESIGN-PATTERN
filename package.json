@@ -8,6 +8,8 @@
     "lint:fix": "prettier-eslint '**/*js' --write",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf build",
+    "styleguide": "styleguidist server",
+    "styleguide-build": "styleguidist build",
     "dev-start": "npm run clean && webpack-dev-server --env.mode development --open --hot",
     "build-dev": "nprun clean && webpack --env.mode development",
     "build-prod": "npm run clean && webpack --env.mode production"
@@ -31,6 +33,7 @@
     "path": "^0.12.7",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
+    "react-styleguidist": "^9.1.11",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
