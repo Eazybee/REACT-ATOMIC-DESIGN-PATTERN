@@ -32,12 +32,14 @@ ${({
     display,
     textAlign,
     color,
-    theme: { fontSize, fontWeight, textColors },
+    theme: {
+      fontSize, fontWeight, textColors, spacing,
+    },
   }) => `
     text-align: ${textAlign};
     color: ${textColors[color]};
     display: ${display};
-    padding: ${padding || '0'};
+    padding: ${spacing[padding] || '0'};
     font-size: ${fontSize[userFontSize]};
     font-weight: ${fontWeight[userFontWeight]};
 `}`;
@@ -51,7 +53,9 @@ Text.defaultProps = {
   color: 'black',
 };
 
-const { textColors, fontSize, fontWeight } = theme;
+const {
+  textColors, fontSize, fontWeight, spacing,
+} = theme;
 Text.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   display: PropTypes.oneOf(['block', 'inline', 'flex', 'inline-block', 'none']),
@@ -59,7 +63,7 @@ Text.propTypes = {
   fontSize: PropTypes.oneOf(Object.keys(fontSize)),
   textAlign: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   fontWeight: PropTypes.oneOf(Object.keys(fontWeight)),
-  padding: PropTypes.string,
+  padding: PropTypes.oneOf(Object.keys(spacing)),
 };
 
 export default Text;

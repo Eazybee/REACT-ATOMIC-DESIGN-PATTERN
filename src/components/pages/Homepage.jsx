@@ -1,13 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import Text from '../UI/atoms/input';
+import Text from '../UI/atoms/Text/Text';
 
 const Homepage = () => (
-  <Homepage.Container>
-    <Text fontSize='sm' color='purpleLight'> Welcome to Atomic Design Pattern </Text>
-  </Homepage.Container>
+  <Text fontSize='sm' color='purpleLight'> Welcome to Atomic Design Pattern </Text>
 );
 
-Homepage.Container = styled.h1``;
 export default Homepage;

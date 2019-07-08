@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
-import theme from './theme';
+import theme from '../theme';
 
 export class ThemeWrapper extends Component {
   render() {
